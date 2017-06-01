@@ -21,7 +21,8 @@ public class ObjectParamTransfer {
         System.out.println("minute="+opt.time.minute);
         System.out.println("second="+opt.time.second);
 
-        //objectMethod opt.objectMethod(opt.time);
+        //objectMethod
+        opt.objectMethod(opt.time);
         System.out.println("        time      ");
         System.out.println("hour = "+opt.time.hour);
         System.out.println("minute = "+opt.time.minute);

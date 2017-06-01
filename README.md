@@ -17,9 +17,21 @@ If you need only the class files (and not the source code), you can use
 
 ## 1 Fundamentals
 
-1.Binary Search 
+### 1.Binary Search  
+1.1 Define mid = lo + (hi - lo) /2  1.2 if key < a[mid] , hi = mid -1;else if key > a[mid], lo = mid + 1;else return mid;
 
-2.Java parameter transfer
+**bug**1: if , else if, else.   If the first (if statement satisfied, the below else if statement shoul not be executed. But if you Write in the format like this: If expre1; if expre 2; else), the second if statement will always be executed!!
+
+### 2.Java parameter transfer  
+2.1 parameter t is a new reference variable contains the same address of argument. That's also say t and time point to the same object.  
+`t == time, true `  
+ `t.equals(time), true`  
+ 
+ Understanding in c: t和time并非同一个引用，此处引用的意思我想是指在内存中是不是同一个time类的变量，或者说time类型的指针。t和time在内存中处于不同的位置, both in stack，time属于对象opt，the actual object is stored in heap。而t属于函数 void objectMethod的Frame里，当调用结束后，t会消失。下面例子中的t1，t2，皆属于opt.swap方法中的参数，当调用时处在opt.swapFrame里，调用结束后消失。
+ 
+
+ 2.2 change the value of t can change argument time value
+
 
 ## 2 Sort
 
