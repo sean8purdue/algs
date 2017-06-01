@@ -17,7 +17,9 @@ If you need only the class files (and not the source code), you can use
 
 ## 1 Fundamentals
 
-1.
+1.Binary Search 
+
+2.Java parameter transfer
 
 ## 2 Sort
 
