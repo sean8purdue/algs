@@ -25,26 +25,39 @@ public class BinarySearchSean {
     }
 
     public static void main(String[] args) {
+
+        // test for local array
 //        int [] whiteList = In.readInts();
-        int [] whiteList = {2, 6, 1, 9, 10, 3, 2,  25, 30};
+//        int [] whiteList = {2, 6, 1, 9, 10, 3, 2,  25, 30};
+//        Arrays.sort(whiteList);
+//
+//        for (int i = 0; i < whiteList.length; i++)
+//            System.out.println(whiteList[i]);
+
+//        int key = 6;
+//        if(rank(key, whiteList) < 0) {
+//            System.out.format("%d not found", key);
+//        } else {
+//            System.out.println("key is found");
+//        }
+//
+//        key = 7;
+//        if(rank(key, whiteList) < 0) {
+//            System.out.format("%d not found", key);
+//        } else {
+//            System.out.println("key is found");
+//        }
+
+        // test for files
+        int [] whiteList = In.readInts(args[0]);
         Arrays.sort(whiteList);
 
-        for (int i = 0; i < whiteList.length; i++)
-            System.out.println(whiteList[i]);
-
-        int key = 6;
-        if(rank(key, whiteList) < 0) {
-            System.out.format("%d not found", key);
-        } else {
-            System.out.println("key is found");
+        while (!StdIn.isEmpty()) {
+            int key = StdIn.readInt();
+            if (rank(key, whiteList) < 0 )
+                StdOut.println(key);
         }
 
-        key = 7;
-        if(rank(key, whiteList) < 0) {
-            System.out.format("%d not found", key);
-        } else {
-            System.out.println("key is found");
-        }
 
 
     }
