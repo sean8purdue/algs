@@ -19,6 +19,7 @@ If you need only the class files (and not the source code), you can use
 
 ### 1.Binary Search  
 1.1 Define mid = lo + (hi - lo) /2  1.2 if key < a[mid] , hi = mid -1;else if key > a[mid], lo = mid + 1;else return mid;
+1.3 while (lo <= hi) Note: <= !!!!
 
 **bug**1: if , else if, else.   If the first (if statement satisfied, the below else if statement shoul not be executed. But if you Write in the format like this: If expre1; if expre 2; else), the second if statement will always be executed!!
 
