@@ -30,6 +30,8 @@ if statement shoul not be executed. But if you Write i
 n the format like this: If expre1; if expre 2; else), 
 the second if statement will always be executed!!
 
+**bug** 2: hi = array.length - 1;
+
 ### 2.Java parameter transfer  
 2.1 parameter t is a new reference variable contains the same address of argument. That's also say t and time point to the same object.  
 `t == time, true `  
