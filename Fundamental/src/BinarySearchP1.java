@@ -6,7 +6,10 @@ import edu.princeton.cs.algs4.*;
 
 public class BinarySearchP1 {
 
-    public static int search (int key, int[] ar) {
+//    public static int search (int key, int[] ar) {
+    // test private method;
+    // private static also works
+    private static int search (int key, int[] ar) {
         int lo = 0;
         int hi = ar.length;
         int mid;
