@@ -45,6 +45,18 @@ public class FixedCapacityStackOfStringsFormal {
 //            s.pop();  // <-- this causes an underflow exception
             //     when uncommented
 
+            if (s.isEmpty()) {
+                System.out.println("Stack is empty");
+            } else {
+                System.out.println("Stack is not empty");
+            }
+
+            if (s.isFull()) {
+                System.out.println("Stack is full");
+            } else {
+                System.out.println("Stack is not full");
+            }
+
         }
         catch (Exception e) {
             e.printStackTrace();
