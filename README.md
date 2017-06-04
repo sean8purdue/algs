@@ -44,6 +44,10 @@ t和time在内存中处于不同的位置, both in stack，time属于对象opt�
 
  2.2 change the value of t can change argument time value
 
+### 3. Fix Capacity Array Based Stack 
+3.1 `private int size = 0;`  
+<-- holds index of **next available** cell in the items array
+3.2 Test Private Method in JavaPrivate method can be used in the self class, not in outer class
 
 ## 2 Sort
 
