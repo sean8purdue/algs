@@ -1,6 +1,9 @@
 /**
  * Created by Sean on 6/4/17.
  */
+
+import edu.princeton.cs.algs4.*;
+
 public class FixedCapacityStackOfStringsSean {
 
     private String[] ar; // <-- holds all of the Strings in the stack
@@ -15,13 +18,37 @@ public class FixedCapacityStackOfStringsSean {
     public int size() {return this.N; }
 
     public void push(String st) {
-        this.ar[N] = st;
-        N++;
+        if (N < ar.length) {
+            this.ar[N] = st;
+            N++;
+        } else {
+            System.out.println("Stack is Full");
+            return;
+        }
     }
 
     public String pop() {
-        N--;
-        return this.ar[N];
+        if (N > 0) {
+            N--;
+            return this.ar[N];
+        } else {
+            System.out.println("Stack is Empty");
+            return null;
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        FixedCapacityStackOfStringsSean s;
+        s = new FixedCapacityStackOfStringsSean(100);
+        while (!StdIn.isEmpty())
+        {
+            String item = StdIn.readString();
+            if (!item.equals("-"))
+                s.push(item);
+            else if (!s.isEmpty()) StdOut.print(s.pop() + " ");
+        }
+        StdOut.println("(" + s.size() + " left on stack)");
     }
 
 }
