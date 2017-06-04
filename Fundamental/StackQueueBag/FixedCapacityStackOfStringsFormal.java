@@ -62,7 +62,24 @@ public class FixedCapacityStackOfStringsFormal {
             e.printStackTrace();
             System.exit(1);
         }
+
+        try {
+            FixedCapacityStackOfStringGeneric<Integer> si = new FixedCapacityStackOfStringGeneric<>(5);
+            si.push(1);
+            si.push(2);
+            si.push(2);
+            si.push(2);
+            si.push(2);
+//            si.push(2); // one more push will cause exception
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+
+        }
     }
+
 
 
 }
