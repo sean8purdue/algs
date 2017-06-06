@@ -22,7 +22,7 @@ If you need only the class files (and not the source code), you can use
 1.2 if key < a[mid] , hi = mid -1;
 else if key > a[mid], lo = mid + 1;
 else return mid;  
-1.3 while (lo <= hi) Note: <= !!!!
+1.3 while (lo <= hi) Note: <= There is still a range to search
 
 **bug**1: if , else if, else.   
 If the first (if statement satisfied, the below else 
