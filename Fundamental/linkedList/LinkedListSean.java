@@ -2,8 +2,8 @@
  * Created by Sean on 6/7/17.
  */
 public class LinkedListSean<E> {
-    Node head;
-    Node tail;
+    private Node head;
+    private Node tail;
 
     private class Node {
         E item;
@@ -31,18 +31,38 @@ public class LinkedListSean<E> {
         Node oldTail = tail;
 
         // create a new node for the end
-        Node tail = new Node(item);
+        Node newtail = new Node(item);
 
         // link the new node to the end of the list
-        oldTail.next = tail;
+        oldTail.next = newtail;
     }
 
     // remove node in the end
 //    public void removeTail() {     }
+
+    // traversal
     public void traversal() {
         for (Node x = head; x != null; x = x.next) {
             System.out.println(x.item);
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        LinkedListSean<String> list = new LinkedListSean<String>();
+
+        // test push in the head
+        list.push("s1");
+        list.push("s2");
+        list.push("s3");
+        list.traversal();
+
+        // test append in the end
+//        list.append("t1");
+//        list.append("t2");
+//        list.append("t3");
+//        list.traversal();
 
     }
 
