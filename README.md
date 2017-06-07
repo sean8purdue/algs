@@ -68,7 +68,20 @@ Test2:
             StdOut.println(is);
         }
 ```  
+3.4 Resized Array, Question: avoid loitering ???
 
+```java
+    public Item pop() {
+        Item item =  ar[--N];
+        ar[N] = null; // avoid loitering ???
+
+        if (N > 0 && N == ar.length/4) 
+        	resize(ar.length/2);
+        return item;
+    }
+```
+  ` `
+   // avoid loitering ???
 
 ## 2 Sort
 
