@@ -47,7 +47,28 @@ t和time在内存中处于不同的位置, both in stack，time属于对象opt�
 ### 3. Fix Capacity Array Based Stack 
 3.1 `private int size = 0;`  
 <-- holds index of **next available** cell in the items array
+
 3.2 Test Private Method in JavaPrivate method can be used in the self class, not in outer class
+
+3.3 Iterator Implement  
+Test1: 
+
+```java        
+for (Object sj : si)
+   StdOut.println(sj);
+```
+  
+Test2: 
+ 
+```java
+
+        Iterator<String> i = si.iterator();
+        while (i.hasNext()) {
+            String is = i.next();
+            StdOut.println(is);
+        }
+```  
+
 
 ## 2 Sort
 

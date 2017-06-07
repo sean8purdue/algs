@@ -1,6 +1,12 @@
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Iterator;
+
 /**
  * Created by Sean on 6/4/17.
  */
+
+
 public class FixedCapacityStackOfStringClient {
 
     public static void main(String[] args) {
@@ -35,6 +41,34 @@ public class FixedCapacityStackOfStringClient {
             e.printStackTrace();
             System.exit(1);
         }
+
+//        System.out.println("\nIterator Stack Test\n");
+        FixedCapacityStackGenericP1 si = new FixedCapacityStackGenericP1(5);
+
+        si.push("one");
+        si.push("two");
+        si.push("three");
+
+        System.out.println("\nIterator Test 1\n");
+        // Iterator 1
+        for (Object sj : si)
+            StdOut.println(sj);
+
+        // Iterator Test 2
+        System.out.println("\nIterator Test 2");
+        Iterator<String> i = si.iterator();
+        while (i.hasNext()) {
+            String is = i.next();
+            StdOut.println(is);
+        }
+
+        System.out.println(si.pop());
+        System.out.println(si.pop());
+        si.push("four");
+        System.out.println(si.pop());
+        System.out.println(si.pop());
+
+
     }
 
 }
