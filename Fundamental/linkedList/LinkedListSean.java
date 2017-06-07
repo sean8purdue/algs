@@ -39,5 +39,11 @@ public class LinkedListSean<E> {
 
     // remove node in the end
 //    public void removeTail() {     }
+    public void traversal() {
+        for (Node x = head; x != null; x = x.next) {
+            System.out.println(x.item);
+        }
+
+    }
 
 }
