@@ -88,6 +88,28 @@ Test2:
 
 Push in the head, remove in the head, append in the tail.
 
+Bug: Append(): If the linked List is empty, tail = null.
+
+3.6 Python 2 players win 15
+
+```python
+scoreA = 0; scoreB=0; gamePoint = 15;
+while scoreA != gamePoint and scoreB != gamePoint:
+# Check deuce condition and handle it. Update gamePoint if requiredgamePoint = checkAndHandleDeuce(scoreA, scoreB, gamePoint)
+
+Update(scoreA, scoreB)
+
+def checkAndHandleDeuce(scoreA, scoreB, gamePoint):
+	# if scores of two players are same and their scores are just 1 point less
+    # than the gamePoint, deuce condition occurs.
+    # if deuce condition occurs, gamePoint needs to incremented by 1
+    # return the gamePoint
+    if scoreA == scoreB and scoreA == gamePoint - 1:
+        gamePoint = gamePoint + 1
+
+	return the gamePoint
+```
+
 ## 2 Sort
 
 2.
