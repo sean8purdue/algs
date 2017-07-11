@@ -81,7 +81,34 @@ Test2:
     }
 ```
   ` `
-   // avoid loitering ???
+   // avoid loitering ???  
+**Loitering**. Java’s garbage collection policy is to reclaim the memory associated with any objects that can no longer be accessed. In our pop() implementations, the refer- ence to the popped item remains in the array. The item is effectively an orphan—it will be never be accessed again—but the Java garbage collector has no way to know this until it is overwritten. Even when the client is done with the item, the reference in the array may keep it alive. This condition (holding a reference to an item that is no longer needed) is known as ***loitering***. In this case, loitering is easy to avoid, by setting the array entry corresponding to the popped item to null, thus overwriting the unused refer- ence and making it possible for the system to reclaim the memory associated with the popped item when the client is finished with it
+
+3.5 Linked List
+
+Push in the head, remove in the head, append in the tail.
+
+Bug: Append(): If the linked List is empty, tail = null.
+
+3.6 Python 2 players win 15
+
+```python
+scoreA = 0; scoreB=0; gamePoint = 15;
+while scoreA != gamePoint and scoreB != gamePoint:
+# Check deuce condition and handle it. Update gamePoint if requiredgamePoint = checkAndHandleDeuce(scoreA, scoreB, gamePoint)
+
+Update(scoreA, scoreB)
+
+def checkAndHandleDeuce(scoreA, scoreB, gamePoint):
+	# if scores of two players are same and their scores are just 1 point less
+    # than the gamePoint, deuce condition occurs.
+    # if deuce condition occurs, gamePoint needs to incremented by 1
+    # return the gamePoint
+    if scoreA == scoreB and scoreA == gamePoint - 1:
+        gamePoint = gamePoint + 1
+
+	return the gamePoint
+```
 
 ## 2 Sort
 
